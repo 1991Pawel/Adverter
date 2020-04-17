@@ -1,0 +1,125 @@
+.list {
+  position: relative;
+  margin-bottom: 2rem;
+  width: 250px;
+  height: 290px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: 0.2s linear;
+  list-style: none;
+
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+
+  &__body {
+    padding: 0.6rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__btn {
+    align-self: flex-end;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: #ff6a0e;
+    transition: 0.2s all;
+
+    &:hover {
+      border: 1px solid #ff6a0e;
+      background-color: #fff;
+    }
+
+    img {
+      height: auto;
+      width: 20px;
+    }
+  }
+
+  &__title,
+  &__desc {
+    color: #949494;
+  }
+
+  &__title {
+    font-family: 'Montserrat';
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  &__desc {
+    font-family: 'Lato';
+    font-size: 1.3rem;
+  }
+
+  &__header {
+    position: absolute;
+    top: 14px;
+    right: -10px;
+    background-color: #ff6a0e;
+    padding: 0.8rem 2rem;
+
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.4rem;
+
+    &:before {
+      content: '';
+      display: block;
+      background-color: #e46516;
+      position: absolute;
+      top: -10px;
+      right: 5px;
+      height: 20px;
+      width: 20px;
+      transform: rotate(45deg);
+      z-index: -9;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    top: 8px;
+    left: 8px;
+    background-color: #fff;
+    text-decoration: none;
+    transition: 0.2s all;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: auto;
+      width: 20px;
+    }
+
+    &:hover {
+      background-color: #ff6a0e;
+      border: 1px solid #fff;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background-color: #ff6a0e;
+
+    img {
+      height: 100%;
+      width: 100%;
+      opacity: 0.5;
+    }
+  }
+}
