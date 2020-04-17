@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,600');
-
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat:700&display=swap');
 *,
 *::before,
 *::after {
@@ -13,7 +12,14 @@ html {
 }
 
 body {
-  padding-left: 150px;
   font-size: 1.6rem;
+  font-family: 'Lato', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: 'Montserrat', sans-serif;
 }
