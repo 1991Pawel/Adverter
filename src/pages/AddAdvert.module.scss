@@ -1,0 +1,44 @@
+.wrapper {
+  height: 100vh;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 0.5rem;
+
+  &__label,
+  &__btn {
+    display: block;
+    padding: 1rem 0 0.5rem;
+  }
+
+  &__label {
+    color: #ff873e;
+  }
+  &__input {
+    &:focus {
+      outline-color: #ff873e;
+    }
+    padding: 0.8rem;
+  }
+  &__btn {
+    width: 100px;
+    border-radius: 5px;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #ff873e;
+    color: #fff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border: 0;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

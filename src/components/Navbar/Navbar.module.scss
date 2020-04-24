@@ -1,0 +1,42 @@
+.nav {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ccc;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__list {
+    align-self: flex-end;
+    display: flex;
+    list-style: none;
+  }
+
+  &__listitem {
+    display: flex;
+    align-items: center;
+    margin-left: 1.5rem;
+  }
+  &__button,
+  &__link {
+    font-family: 'Montserrat';
+  }
+
+  &__link {
+    color: black;
+    text-decoration: none;
+  }
+
+  &__active {
+    border: none;
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #ff6a0e;
+    color: #fff;
+  }
+}
