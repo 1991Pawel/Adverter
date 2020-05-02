@@ -1,16 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './store/store';
 import Home from './pages/Home';
-import AddAdvert from './pages/AddAdvert';
+import AddForm from './pages/AddForm';
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/add" component={AddAdvert} />
-      </Switch>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/add" component={AddForm} />
+        </Switch>
+      </Router>
+    </Provider>
   );
 };
 
