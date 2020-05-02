@@ -24,14 +24,15 @@ type DispatchProps = ReturnType<typeof mapDispatchToProps>;
 // eslint-disable-next-line no-shadow
 const AddForm = ({ addAdvert }: DispatchProps) => {
   const [error, setError] = useState<string | null>();
-
-  const [form, setForm] = useState({
+  const initalState = {
     title: '',
     link: '',
     image: '',
     price: 0,
     size: 0,
-  });
+  };
+
+  const [form, setForm] = useState(initalState);
 
   const updateField = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({
@@ -51,6 +52,7 @@ const AddForm = ({ addAdvert }: DispatchProps) => {
     } else {
       setError(null);
       addAdvert(newAdvert);
+      setForm(initalState);
     }
   };
 
