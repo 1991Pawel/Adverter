@@ -59,7 +59,7 @@ const AddForm = ({ addAdvert }: DispatchProps) => {
       <Navbar />
       <div className={styled.wrapper}>
         <form onSubmit={handleSubmit} className={styled.form}>
-          {error && <p>{error}</p>}
+          {error && <p className={styled.form__error}>{error}</p>}
           <label className={styled.form__label} htmlFor="title">
             Tytuł:
           </label>

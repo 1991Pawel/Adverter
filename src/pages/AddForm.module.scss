@@ -10,6 +10,13 @@
   margin: 2rem auto;
   padding: 0.5rem;
 
+  &__error {
+    padding: 2rem;
+    background-color: #ff873e;
+    color: #fff;
+    text-align: center;
+  }
+
   &__label,
   &__btn {
     display: block;
