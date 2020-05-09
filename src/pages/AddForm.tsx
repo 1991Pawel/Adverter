@@ -24,6 +24,7 @@ type DispatchProps = ReturnType<typeof mapDispatchToProps>;
 // eslint-disable-next-line no-shadow
 const AddForm = ({ addAdvert }: DispatchProps) => {
   const [error, setError] = useState<string | null>();
+  const [success, setSuccess] = useState<string | null>();
   const initalState = {
     title: '',
     link: '',
@@ -31,7 +32,6 @@ const AddForm = ({ addAdvert }: DispatchProps) => {
     price: 0,
     size: 0,
   };
-
   const [form, setForm] = useState(initalState);
 
   const updateField = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -39,6 +39,13 @@ const AddForm = ({ addAdvert }: DispatchProps) => {
       ...form,
       [e.target.name]: e.target.value,
     });
+  };
+
+  const formConfirm = () => {
+    setSuccess('Ogłoszenie Dodane');
+    setTimeout(() => {
+      setSuccess(null);
+    }, 3000);
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -52,6 +59,7 @@ const AddForm = ({ addAdvert }: DispatchProps) => {
     } else {
       setError(null);
       addAdvert(newAdvert);
+      formConfirm();
       setForm(initalState);
     }
   };
@@ -62,6 +70,7 @@ const AddForm = ({ addAdvert }: DispatchProps) => {
       <div className={styled.wrapper}>
         <form onSubmit={handleSubmit} className={styled.form}>
           {error && <p className={styled.form__error}>{error}</p>}
+          {success && <p className={styled.form__success}>{success}</p>}
           <label className={styled.form__label} htmlFor="title">
             Tytuł:
           </label>
