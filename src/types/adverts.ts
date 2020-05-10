@@ -1,7 +1,7 @@
 type Advert = {
   title: string;
   image: string;
-  id: number;
+  id: number | string;
   price: number;
   size: number;
   link: string;

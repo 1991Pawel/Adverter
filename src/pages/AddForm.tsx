@@ -1,22 +1,33 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
+import { v1 as uuidv4 } from 'uuid';
 import styled from './AddForm.module.scss';
 import Navbar from '../components/Navbar/Navbar';
 import { addAdvert } from '../actions/advert.actions';
 import Advert from '../types/adverts';
 
-const validate = (form: Advert): string | null => {
-  if (!form.title.length) {
+const validate = (form: Advert): string => {
+  const { title, link, price } = form;
+  const linkWithHttp = link.includes('http');
+
+  if (!title.length) {
     return 'Wprowadź tytuł';
   }
-  if (form.link.length < 8) {
-    return 'Wprowadź poprawny link ogłoszenia';
+  if (title.length > 60) {
+    return 'tytuł nie powinien zawierać wiecej niż 60 znaków';
   }
-  if (!form.price) {
-    return 'Wprowadź cene ';
+  if (!link.length) {
+    return 'Wprowadź link ogłoszenia';
   }
-  return null;
+  if (!linkWithHttp) {
+    return 'Wprowadź poprawny adres ogłoszenia';
+  }
+  if (!price) {
+    return ' wprowadź cene';
+  }
+
+  return '';
 };
 
 type DispatchProps = ReturnType<typeof mapDispatchToProps>;
@@ -51,7 +62,7 @@ const AddForm = ({ addAdvert }: DispatchProps) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const id = Math.random();
+    const id = uuidv4();
     const newAdvert = { ...form, id };
     const errorMsg = validate(newAdvert);
     if (errorMsg) {

@@ -7,7 +7,7 @@
     0 3px 6px rgba(190, 190, 190, 0.23);
   transition: 0.2s linear;
   list-style: none;
-
+  word-wrap: break-word;
   &:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
