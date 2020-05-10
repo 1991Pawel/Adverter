@@ -20,7 +20,7 @@ const AddForm = ({ addAdvert }: DispatchProps) => {
     link: '',
     image: '',
     price: 0,
-    size: 0,
+    size: '',
   };
   const [form, setForm] = useState(initalState);
 
@@ -141,7 +141,7 @@ const AddForm = ({ addAdvert }: DispatchProps) => {
             id="size"
             name="size"
             onChange={updateField}
-            value={form.size ? form.size : ''}
+            value={form.size}
           />
           <button className={styled.form__btn} type="submit">
             {t('Submit.1')}
