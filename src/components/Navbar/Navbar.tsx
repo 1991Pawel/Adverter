@@ -45,12 +45,20 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li className={styled.nav__listitem}>
-            <button onClick={() => handleClick('pl')} type="button">
+            <button
+              className={styled.nav__langbtn}
+              onClick={() => handleClick('pl')}
+              type="button"
+            >
               PL
             </button>
           </li>
           <li className={styled.nav__listitem}>
-            <button onClick={() => handleClick('en')} type="button">
+            <button
+              className={styled.nav__langbtn}
+              onClick={() => handleClick('en')}
+              type="button"
+            >
               ENG
             </button>
           </li>
