@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import store from './store/store';
 import Home from './pages/Home';
 import AddForm from './pages/AddForm';
+import Adverts from './pages/Adverts';
 
 const App: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ const App: React.FC = () => {
       <Router>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/adverts" component={Adverts} />
           <Route exact path="/add" component={AddForm} />
         </Switch>
       </Router>

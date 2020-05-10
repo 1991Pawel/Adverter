@@ -13,6 +13,16 @@ const Navbar = () => (
             exact
             to="/"
           >
+            Start
+          </NavLink>
+        </li>
+        <li className={styled.nav__listitem}>
+          <NavLink
+            activeClassName={styled.nav__active}
+            className={styled.nav__link}
+            exact
+            to="/adverts"
+          >
             Ogłoszenia
           </NavLink>
         </li>
