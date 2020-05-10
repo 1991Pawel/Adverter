@@ -1,0 +1,62 @@
+{
+  "Start": {
+    "1": "Start"
+  },
+  "Adverts": {
+    "1": "Adverts"
+  },
+  "Add": {
+    "1": "Add"
+  },
+  "Title": {
+    "1": "Title"
+  },
+  "AdvertLink": {
+    "1": "Advert Link"
+  },
+  "ImageLink": {
+    "1": "Img Link"
+  },
+  "Price": {
+    "1": "Price"
+  },
+  "Size": {
+    "1": "Size"
+  },
+  "Submit": {
+    "1": "Submit"
+  },
+  "AdvertAdd": {
+    "1": "Advert was added to the list"
+  },
+  "ErrorTitle": {
+    "1": "Enter Title"
+  },
+  "ErrorTitleTwo": {
+    "1": "Title cannot contain more than 60 characters"
+  },
+  "ErrorLink": {
+    "1": "Enter the advert link"
+  },
+  "ErrorLinkTwo": {
+    "1": "Link is not valid"
+  },
+  "ErrorPrice": {
+    "1": "Complete the price field"
+  },
+  "How": {
+    "1": "How it Works?"
+  },
+  "Step1": {
+    "1": "Find Advertisement"
+  },
+  "Step2": {
+    "1": "Complete The Form"
+  },
+  "Step3": {
+    "1": "Done!"
+  },
+  "StepDesc": {
+    "1": "application to track adverts and price"
+  }
+}

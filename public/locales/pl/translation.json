@@ -1,0 +1,62 @@
+{
+  "Start": {
+    "1": "Start"
+  },
+  "Adverts": {
+    "1": "Ogłoszenia"
+  },
+  "Add": {
+    "1": "Dodaj"
+  },
+  "Title": {
+    "1": "Tytuł"
+  },
+  "AdvertLink": {
+    "1": "Link Ogłoszenia"
+  },
+  "ImageLink": {
+    "1": "Link Zdjęcia"
+  },
+  "Price": {
+    "1": "Cena"
+  },
+  "Size": {
+    "1": "Wielkość"
+  },
+  "Submit": {
+    "1": "Gotowe"
+  },
+  "AdvertAdd": {
+    "1": "Ogłoszenie zostało dodane"
+  },
+  "ErrorTitle": {
+    "1": "Enter Title"
+  },
+  "ErrorTitleTwo": {
+    "1": "tytuł nie powinien zawierać wiecej niż 60 znaków"
+  },
+  "ErrorLink": {
+    "1": "Wprowadź link ogłoszenia"
+  },
+  "ErrorLinkTwo": {
+    "1": "Wprowadź poprawny adres ogłoszenia"
+  },
+  "ErrorPrice": {
+    "1": "Podaj Cenę"
+  },
+  "How": {
+    "1": "Jak To Działa?"
+  },
+  "Step1": {
+    "1": "Znajdz ogłoszenie"
+  },
+  "Step2": {
+    "1": "Wypełnij Pola Formularza"
+  },
+  "Step3": {
+    "1": "Gotowe!"
+  },
+  "StepDesc": {
+    "1": "Aplikacja ma na celu śledzenie ogłoszeń oraz zmian ich cen bez konieczności dodawania ich do zakładek."
+  }
+}

@@ -2,38 +2,17 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 import { v1 as uuidv4 } from 'uuid';
+import { useTranslation } from 'react-i18next';
 import styled from './AddForm.module.scss';
 import Navbar from '../components/Navbar/Navbar';
 import { addAdvert } from '../actions/advert.actions';
 import Advert from '../types/adverts';
 
-const validate = (form: Advert): string => {
-  const { title, link, price } = form;
-  const linkWithHttp = link.includes('http');
-
-  if (!title.length) {
-    return 'Wprowadź tytuł';
-  }
-  if (title.length > 60) {
-    return 'tytuł nie powinien zawierać wiecej niż 60 znaków';
-  }
-  if (!link.length) {
-    return 'Wprowadź link ogłoszenia';
-  }
-  if (!linkWithHttp) {
-    return 'Wprowadź poprawny adres ogłoszenia';
-  }
-  if (!price) {
-    return ' wprowadź cene';
-  }
-
-  return '';
-};
-
 type DispatchProps = ReturnType<typeof mapDispatchToProps>;
 
 // eslint-disable-next-line no-shadow
 const AddForm = ({ addAdvert }: DispatchProps) => {
+  const { t } = useTranslation();
   const [error, setError] = useState<string | null>();
   const [success, setSuccess] = useState<string | null>();
   const initalState = {
@@ -53,10 +32,33 @@ const AddForm = ({ addAdvert }: DispatchProps) => {
   };
 
   const formConfirm = () => {
-    setSuccess('Ogłoszenie Dodane');
+    setSuccess(t('AdvertAdd.1'));
     setTimeout(() => {
       setSuccess(null);
     }, 3000);
+  };
+
+  const validate = (forms: Advert): string => {
+    const { title, link, price } = forms;
+    const linkWithHttp = link.includes('http');
+
+    if (!title.length) {
+      return `${t('ErrorTitle.1')}`;
+    }
+    if (title.length > 60) {
+      return `${t('ErrorTitleTwo.1')}`;
+    }
+    if (!link.length) {
+      return `${t('ErrorLink.1')}`;
+    }
+    if (!linkWithHttp) {
+      return `${t('ErrorLinkTwo.1')}`;
+    }
+    if (!price) {
+      return `${t('ErrorPrice.1')}`;
+    }
+
+    return '';
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -83,7 +85,7 @@ const AddForm = ({ addAdvert }: DispatchProps) => {
           {error && <p className={styled.form__error}>{error}</p>}
           {success && <p className={styled.form__success}>{success}</p>}
           <label className={styled.form__label} htmlFor="title">
-            Tytuł:
+            {t('Title.1')}
           </label>
           <input
             className={styled.form__input}
@@ -95,7 +97,7 @@ const AddForm = ({ addAdvert }: DispatchProps) => {
           />
 
           <label className={styled.form__label} htmlFor="link">
-            Link Ogłoszenia:
+            {t('AdvertLink.1')}
           </label>
           <input
             className={styled.form__input}
@@ -107,7 +109,7 @@ const AddForm = ({ addAdvert }: DispatchProps) => {
           />
 
           <label className={styled.form__label} htmlFor="image">
-            Link Zdjęcia:
+            {t('ImageLink.1')}
           </label>
           <input
             className={styled.form__input}
@@ -119,7 +121,7 @@ const AddForm = ({ addAdvert }: DispatchProps) => {
           />
 
           <label className={styled.form__label} htmlFor="price">
-            Cena:
+            {t('Price.1')}
           </label>
           <input
             className={styled.form__input}
@@ -131,7 +133,7 @@ const AddForm = ({ addAdvert }: DispatchProps) => {
           />
 
           <label className={styled.form__label} htmlFor="size">
-            Wielkość:
+            {t('Size.1')}
           </label>
           <input
             className={styled.form__input}
@@ -142,7 +144,7 @@ const AddForm = ({ addAdvert }: DispatchProps) => {
             value={form.size ? form.size : ''}
           />
           <button className={styled.form__btn} type="submit">
-            gotowe
+            {t('Submit.1')}
           </button>
         </form>
       </div>
