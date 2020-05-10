@@ -41,7 +41,9 @@ const AdvertListItem = ({ removeAdvert, advert }: Props) => {
       </div>
       <div className={styled.list__body}>
         <span className={styled.list__title}>{advert.title}</span>
-        <span className={styled.list__desc}>{`${advert.size}m2`}</span>
+        {advert.size && (
+          <span className={styled.list__desc}>{`${advert.size} m2`}</span>
+        )}
         <button
           onClick={() => removeHandler(advert.id)}
           type="button"
