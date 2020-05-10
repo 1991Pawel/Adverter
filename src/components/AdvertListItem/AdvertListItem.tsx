@@ -19,7 +19,7 @@ type AdvertProps = {
 type Props = DispatchProps & AdvertProps;
 
 const AdvertListItem = ({ removeAdvert, advert }: Props) => {
-  const removeHandler = (id: number) => {
+  const removeHandler = (id: any) => {
     removeAdvert(id);
   };
 
