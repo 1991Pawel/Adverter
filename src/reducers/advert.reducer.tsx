@@ -3,10 +3,10 @@ import { AdvertsActionTypes } from '../types/actions';
 
 const initState: Advert[] = [
   {
-    id: 0,
+    id: '1',
     title: 'Piękna w pełni umeblowana Willa Parkowa pomorskie',
     price: 1490000,
-    size: 230,
+    size: '222',
     link:
       'https://www.otodom.pl/oferta/piekna-w-pelni-umeblowana-willa-parkowa-pomorskie-ID45A5Y.html',
     image:

@@ -1,4 +1,5 @@
 import Advert from './adverts';
+import { Id } from './id';
 
 export const ADD_ADVERT = 'ADD_ADVERT';
 export const REMOVE_ADVERT = 'REMOVE_ADVERT';
@@ -10,7 +11,7 @@ export type AddAdvert = {
 
 export type RemoveAdvert = {
   type: typeof REMOVE_ADVERT;
-  id: number;
+  id: Id;
 };
 
 export type AdvertsActionTypes = AddAdvert | RemoveAdvert;

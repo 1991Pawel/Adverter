@@ -19,7 +19,7 @@ const AddForm = ({ addAdvert }: DispatchProps) => {
     title: '',
     link: '',
     image: '',
-    price: 0,
+    price: '',
     size: '',
   };
   const [form, setForm] = useState(initalState);
@@ -129,7 +129,7 @@ const AddForm = ({ addAdvert }: DispatchProps) => {
             id="price"
             name="price"
             onChange={updateField}
-            value={form.price ? form.price : ''}
+            value={form.price}
           />
 
           <label className={styled.form__label} htmlFor="size">

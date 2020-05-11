@@ -1,9 +1,11 @@
+import { Id } from './id';
+
 type Advert = {
   title: string;
   image: string;
-  id: number | string;
-  price: number;
-  size: number | string;
+  id: Id | string;
+  price: number | string;
+  size: string;
   link: string;
 };
 

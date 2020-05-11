@@ -6,8 +6,9 @@ import linkIcon from '../../assets/link.png';
 import btnRemoveIcon from '../../assets/bin.svg';
 import { RemoveAdvert } from '../../actions/advert.actions';
 import Advert from '../../types/adverts';
+import { Id } from '../../types/id';
 
-const currencyConverter = (price: number): string => {
+const currencyConverter = (price: number | string): string => {
   const convertedPrice = price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
   return `${convertedPrice} zł`;
 };
@@ -19,7 +20,7 @@ type AdvertProps = {
 type Props = DispatchProps & AdvertProps;
 
 const AdvertListItem = ({ removeAdvert, advert }: Props) => {
-  const removeHandler = (id: any) => {
+  const removeHandler = (id: Id) => {
     removeAdvert(id);
   };
 
@@ -57,7 +58,7 @@ const AdvertListItem = ({ removeAdvert, advert }: Props) => {
 };
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
-  removeAdvert: (id: number) => dispatch(RemoveAdvert(id)),
+  removeAdvert: (id: Id) => dispatch(RemoveAdvert(id)),
 });
 
 export default connect(null, mapDispatchToProps)(AdvertListItem);
