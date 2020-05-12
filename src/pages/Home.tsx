@@ -1,13 +1,13 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import Navbar from '../components/Navbar/Navbar';
 import styled from './Home.module.scss';
+import AbsoluteWrapper from '../components/AbsoluteWrapper/AbsoluteWrapper';
 
 const Home = () => {
   const { t } = useTranslation();
+
   return (
-    <>
-      <Navbar />
+    <AbsoluteWrapper>
       <div className={styled.wrapper}>
         <h1 className={styled.title}>{t('How.1')}</h1>
         <div className={styled.container}>
@@ -28,7 +28,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </>
+    </AbsoluteWrapper>
   );
 };
 

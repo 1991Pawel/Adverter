@@ -4,9 +4,9 @@ import { Dispatch } from 'redux';
 import { v1 as uuidv4 } from 'uuid';
 import { useTranslation } from 'react-i18next';
 import styled from './AddForm.module.scss';
-import Navbar from '../components/Navbar/Navbar';
 import { addAdvert } from '../actions/advert.actions';
 import Advert from '../types/adverts';
+import AbsoluteWrapper from '../components/AbsoluteWrapper/AbsoluteWrapper';
 
 type DispatchProps = ReturnType<typeof mapDispatchToProps>;
 
@@ -22,6 +22,7 @@ const AddForm = ({ addAdvert }: DispatchProps) => {
     price: '',
     size: '',
   };
+
   const [form, setForm] = useState(initalState);
 
   const updateField = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -79,75 +80,76 @@ const AddForm = ({ addAdvert }: DispatchProps) => {
 
   return (
     <>
-      <Navbar />
-      <div className={styled.wrapper}>
-        <form onSubmit={handleSubmit} className={styled.form}>
-          {error && <p className={styled.form__error}>{error}</p>}
-          {success && <p className={styled.form__success}>{success}</p>}
-          <label className={styled.form__label} htmlFor="title">
-            {t('Title.1')}
-          </label>
-          <input
-            className={styled.form__input}
-            type="text"
-            id="title"
-            name="title"
-            onChange={updateField}
-            value={form.title}
-          />
+      <AbsoluteWrapper>
+        <div className={styled.wrapper}>
+          <form onSubmit={handleSubmit} className={styled.form}>
+            {error && <p className={styled.form__error}>{error}</p>}
+            {success && <p className={styled.form__success}>{success}</p>}
+            <label className={styled.form__label} htmlFor="title">
+              {t('Title.1')}
+            </label>
+            <input
+              className={styled.form__input}
+              type="text"
+              id="title"
+              name="title"
+              onChange={updateField}
+              value={form.title}
+            />
 
-          <label className={styled.form__label} htmlFor="link">
-            {t('AdvertLink.1')}
-          </label>
-          <input
-            className={styled.form__input}
-            type="text"
-            id="link"
-            name="link"
-            onChange={updateField}
-            value={form.link}
-          />
+            <label className={styled.form__label} htmlFor="link">
+              {t('AdvertLink.1')}
+            </label>
+            <input
+              className={styled.form__input}
+              type="text"
+              id="link"
+              name="link"
+              onChange={updateField}
+              value={form.link}
+            />
 
-          <label className={styled.form__label} htmlFor="image">
-            {t('ImageLink.1')}
-          </label>
-          <input
-            className={styled.form__input}
-            type="text"
-            id="image"
-            name="image"
-            onChange={updateField}
-            value={form.image}
-          />
+            <label className={styled.form__label} htmlFor="image">
+              {t('ImageLink.1')}
+            </label>
+            <input
+              className={styled.form__input}
+              type="text"
+              id="image"
+              name="image"
+              onChange={updateField}
+              value={form.image}
+            />
 
-          <label className={styled.form__label} htmlFor="price">
-            {t('Price.1')}
-          </label>
-          <input
-            className={styled.form__input}
-            type="number"
-            id="price"
-            name="price"
-            onChange={updateField}
-            value={form.price}
-          />
+            <label className={styled.form__label} htmlFor="price">
+              {t('Price.1')}
+            </label>
+            <input
+              className={styled.form__input}
+              type="number"
+              id="price"
+              name="price"
+              onChange={updateField}
+              value={form.price}
+            />
 
-          <label className={styled.form__label} htmlFor="size">
-            {t('Size.1')}
-          </label>
-          <input
-            className={styled.form__input}
-            type="number"
-            id="size"
-            name="size"
-            onChange={updateField}
-            value={form.size}
-          />
-          <button className={styled.form__btn} type="submit">
-            {t('Submit.1')}
-          </button>
-        </form>
-      </div>
+            <label className={styled.form__label} htmlFor="size">
+              {t('Size.1')}
+            </label>
+            <input
+              className={styled.form__input}
+              type="number"
+              id="size"
+              name="size"
+              onChange={updateField}
+              value={form.size}
+            />
+            <button className={styled.form__btn} type="submit">
+              {t('Submit.1')}
+            </button>
+          </form>
+        </div>
+      </AbsoluteWrapper>
     </>
   );
 };
