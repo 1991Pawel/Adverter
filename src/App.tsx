@@ -1,7 +1,6 @@
-import React, { useContext } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import React from 'react';
+import { Route, Switch, useLocation } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { __RouterContext } from 'react-router';
 import { useTransition, animated } from 'react-spring';
 import store from './store/store';
 import Home from './pages/Home';
@@ -10,7 +9,7 @@ import Adverts from './pages/Adverts';
 import Navbar from './components/Navbar/Navbar';
 
 const App: React.FC = () => {
-  const { location } = useContext(__RouterContext);
+  const location = useLocation();
   // eslint-disable-next-line no-shadow
   const transitions = useTransition(location, (location) => location.pathname, {
     from: { opacity: 0, transform: 'translate(100%,0)' },
@@ -37,14 +36,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-
-// return (
-//   <Navbar />
-//   <Switch>
-//     <Provider store={store}>
-//       <Route exact path="/" component={Home} />
-//       <Route exact path="/adverts" component={Adverts} />
-//       <Route exact path="/add" component={AddForm} />
-//     </Provider>
-//   </Switch>
-// )
