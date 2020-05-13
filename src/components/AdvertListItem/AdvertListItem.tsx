@@ -27,7 +27,7 @@ const AdvertListItem = ({ removeAdvert, advert }: Props) => {
   return (
     <li className={styled.list}>
       <div className={styled.list__image}>
-        <img src={advert.image} alt={advert.title} />
+        <img src={advert.image} alt="" />
       </div>
       <a
         href={advert.link}
