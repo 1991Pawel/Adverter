@@ -126,11 +126,12 @@ const AddForm = ({ addAdvert }: DispatchProps) => {
             </label>
             <input
               className={styled.form__input}
-              type="number"
+              type="text"
               id="price"
               name="price"
               onChange={updateField}
               value={form.price}
+              maxLength={12}
             />
 
             <label className={styled.form__label} htmlFor="size">
@@ -138,11 +139,12 @@ const AddForm = ({ addAdvert }: DispatchProps) => {
             </label>
             <input
               className={styled.form__input}
-              type="number"
+              type="text"
               id="size"
               name="size"
               onChange={updateField}
               value={form.size}
+              maxLength={5}
             />
             <button className={styled.form__btn} type="submit">
               {t('Submit.1')}
