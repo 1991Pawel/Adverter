@@ -1,5 +1,9 @@
 import Advert from '../types/adverts';
-import { AdvertsActionTypes } from '../types/actions';
+import {
+  AdvertsActionTypes,
+  ADD_ADVERT,
+  REMOVE_ADVERT,
+} from '../types/actions';
 
 const initState: Advert[] = [
   {
@@ -19,9 +23,9 @@ export const advertReducer = (
   action: AdvertsActionTypes
 ): Advert[] => {
   switch (action.type) {
-    case 'ADD_ADVERT':
+    case ADD_ADVERT:
       return [...state, action.payload];
-    case 'REMOVE_ADVERT':
+    case REMOVE_ADVERT:
       return [...state.filter((item) => item.id !== action.id)];
     default:
       return state;
