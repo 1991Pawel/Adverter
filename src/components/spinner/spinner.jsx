@@ -1,11 +1,6 @@
 import React from 'react';
 import styled from './spinner.module.scss';
-import AbsoluteWrapper from '../AbsoluteWrapper/AbsoluteWrapper';
 
-const Spinner = () => (
-  <AbsoluteWrapper>
-    <div className={styled.loader} />;
-  </AbsoluteWrapper>
-);
+const Spinner = () => <div className={styled.loading} />;
 
 export default Spinner;
