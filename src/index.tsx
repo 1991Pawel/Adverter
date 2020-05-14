@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import './i18next';
-import Spinner from './components/spinner/spinner';
+import Spinner from './components/Spinner/Spinner';
 // eslint-disable-next-line import/order
 import { BrowserRouter as Router } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Suspense fallback={Spinner}>
+    <Suspense fallback={<Spinner />}>
       <Router>
         <App />
       </Router>

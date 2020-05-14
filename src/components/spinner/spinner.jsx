@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from './spinner.module.scss';
+import styled from './Spinner.module.scss';
 
 const Spinner = () => <div className={styled.loading} />;
 
