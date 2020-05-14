@@ -5,7 +5,7 @@ import './i18next';
 import Spinner from './components/Spinner/Spinner';
 // eslint-disable-next-line import/order
 import { BrowserRouter as Router } from 'react-router-dom';
-// import App from './App';
+
 const App = React.lazy(() => import('./App'));
 
 ReactDOM.render(
