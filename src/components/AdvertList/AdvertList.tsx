@@ -7,7 +7,6 @@ import { AppState } from '../../reducers/root.reducer';
 type Props = ReturnType<typeof mapStateToProps>;
 
 const AdvertList = ({ adverts }: Props) => {
-  console.log(adverts);
   return (
     <ul className={styled.wrapper}>
       {adverts &&
