@@ -22,6 +22,9 @@
     text-align: center;
     transition: 0.2s;
     width: 0;
+    &:focus {
+      width: 200px;
+    }
   }
 
   &__button {

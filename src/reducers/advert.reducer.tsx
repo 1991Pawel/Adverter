@@ -21,7 +21,7 @@ const initState: Advert[] = [
     title: 'Test Advert',
     price: 1490000,
     size: '222',
-    link: 'https:/google.pl',
+    link: 'https://www.oleole.pl/',
     image:
       'https://apollo-ireland.akamaized.net/v1/files/eyJmbiI6ImIwMzc3dGl3ejE1MTMtQVBMIiwidyI6W3siZm4iOiJqMWozbzEzbTZiZ24xLUFQTCIsInMiOiIxNCIsInAiOiIxMCwtMTAiLCJhIjoiMCJ9XX0.XrmdEW2Mfv8dotEG0bS1AFj68FAgXLvUay8RRMZqOIA/image;s=1280x1024;q=80',
   },
@@ -30,7 +30,7 @@ const initState: Advert[] = [
     title: 'Test Advert',
     price: 1490000,
     size: '222',
-    link: 'https:/google.pl',
+    link: 'https://www.oleole.pl/',
     image:
       'https://apollo-ireland.akamaized.net/v1/files/eyJmbiI6ImIwMzc3dGl3ejE1MTMtQVBMIiwidyI6W3siZm4iOiJqMWozbzEzbTZiZ24xLUFQTCIsInMiOiIxNCIsInAiOiIxMCwtMTAiLCJhIjoiMCJ9XX0.XrmdEW2Mfv8dotEG0bS1AFj68FAgXLvUay8RRMZqOIA/image;s=1280x1024;q=80',
   },
