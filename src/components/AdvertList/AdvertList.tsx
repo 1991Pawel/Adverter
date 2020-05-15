@@ -7,6 +7,7 @@ import { AppState } from '../../reducers/root.reducer';
 type Props = ReturnType<typeof mapStateToProps>;
 
 const AdvertList = ({ adverts }: Props) => {
+  console.log(adverts);
   return (
     <ul className={styled.wrapper}>
       {adverts &&
@@ -19,7 +20,7 @@ const AdvertList = ({ adverts }: Props) => {
 
 const mapStateToProps = (state: AppState) => ({
   adverts: state.adverts.filter((advert) =>
-    advert.title.includes(state.filter.searchText.toLowerCase())
+    advert.title.toLowerCase().includes(state.filter.searchText.toLowerCase())
   ),
 });
 
