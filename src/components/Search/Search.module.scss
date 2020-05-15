@@ -12,7 +12,8 @@
     text-align: center;
   }
 
-  &__input {
+  &__input,
+  &__input__active {
     background: transparent;
     border: none;
     outline: none;
@@ -21,10 +22,14 @@
     color: #fff;
     text-align: center;
     transition: 0.2s;
-    width: 0;
+    width: 0px;
+
     &:focus {
       width: 200px;
     }
+  }
+  &__input__active {
+    width: 200px;
   }
 
   &__button {

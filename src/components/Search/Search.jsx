@@ -20,7 +20,7 @@ const Search = ({ SearchText }) => {
   return (
     <form className={styled.search}>
       <input
-        className={styled.search__input}
+        className={search ? styled.search__input__active : styled.search__input}
         type="text"
         placeholder="Is it me you’re looking for?"
         value={search}
