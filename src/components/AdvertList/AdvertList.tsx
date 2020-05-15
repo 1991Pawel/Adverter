@@ -18,7 +18,9 @@ const AdvertList = ({ adverts }: Props) => {
 };
 
 const mapStateToProps = (state: AppState) => ({
-  adverts: state.adverts,
+  adverts: state.adverts.filter((advert) =>
+    advert.title.includes(state.filter.searchText.toLowerCase())
+  ),
 });
 
 export default connect(mapStateToProps)(AdvertList);

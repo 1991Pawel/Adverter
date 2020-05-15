@@ -16,6 +16,24 @@ const initState: Advert[] = [
     image:
       'https://apollo-ireland.akamaized.net/v1/files/eyJmbiI6ImIwMzc3dGl3ejE1MTMtQVBMIiwidyI6W3siZm4iOiJqMWozbzEzbTZiZ24xLUFQTCIsInMiOiIxNCIsInAiOiIxMCwtMTAiLCJhIjoiMCJ9XX0.XrmdEW2Mfv8dotEG0bS1AFj68FAgXLvUay8RRMZqOIA/image;s=1280x1024;q=80',
   },
+  {
+    id: '2',
+    title: 'Test Advert',
+    price: 1490000,
+    size: '222',
+    link: 'https:/google.pl',
+    image:
+      'https://apollo-ireland.akamaized.net/v1/files/eyJmbiI6ImIwMzc3dGl3ejE1MTMtQVBMIiwidyI6W3siZm4iOiJqMWozbzEzbTZiZ24xLUFQTCIsInMiOiIxNCIsInAiOiIxMCwtMTAiLCJhIjoiMCJ9XX0.XrmdEW2Mfv8dotEG0bS1AFj68FAgXLvUay8RRMZqOIA/image;s=1280x1024;q=80',
+  },
+  {
+    id: '3',
+    title: 'Test Advert',
+    price: 1490000,
+    size: '222',
+    link: 'https:/google.pl',
+    image:
+      'https://apollo-ireland.akamaized.net/v1/files/eyJmbiI6ImIwMzc3dGl3ejE1MTMtQVBMIiwidyI6W3siZm4iOiJqMWozbzEzbTZiZ24xLUFQTCIsInMiOiIxNCIsInAiOiIxMCwtMTAiLCJhIjoiMCJ9XX0.XrmdEW2Mfv8dotEG0bS1AFj68FAgXLvUay8RRMZqOIA/image;s=1280x1024;q=80',
+  },
 ];
 
 export const advertReducer = (
