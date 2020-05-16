@@ -1,12 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
+import Highlight from 'react-highlighter';
 import styled from './AdvertListItem.module.scss';
 import linkIcon from '../../assets/link.png';
 import btnRemoveIcon from '../../assets/bin.svg';
 import { RemoveAdvert } from '../../actions/advert.actions';
 import Advert from '../../types/adverts';
 import { Id } from '../../types/id';
+import { AppState } from '../../reducers/root.reducer';
 
 const currencyConverter = (price: number | string): string => {
   const convertedPrice = price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
@@ -16,10 +18,11 @@ const currencyConverter = (price: number | string): string => {
 type DispatchProps = ReturnType<typeof mapDispatchToProps>;
 type AdvertProps = {
   advert: Advert;
+  filter: String;
 };
 type Props = DispatchProps & AdvertProps;
 
-const AdvertListItem = ({ removeAdvert, advert }: Props) => {
+const AdvertListItem = ({ filter, advert, removeAdvert }: Props) => {
   const removeHandler = (id: Id) => {
     removeAdvert(id);
   };
@@ -41,7 +44,9 @@ const AdvertListItem = ({ removeAdvert, advert }: Props) => {
         {currencyConverter(advert.price)}
       </div>
       <div className={styled.list__body}>
-        <span className={styled.list__title}>{advert.title}</span>
+        <span className={styled.list__title}>
+          <Highlight search={filter}>{advert.title}</Highlight>
+        </span>
         {advert.size && (
           <span className={styled.list__desc}>{`${advert.size} m2`}</span>
         )}
@@ -61,4 +66,8 @@ const mapDispatchToProps = (dispatch: Dispatch) => ({
   removeAdvert: (id: Id) => dispatch(RemoveAdvert(id)),
 });
 
-export default connect(null, mapDispatchToProps)(AdvertListItem);
+const mapStateToProps = (state: AppState) => ({
+  filter: state.filter.searchText,
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(AdvertListItem);

@@ -10,7 +10,7 @@ const Search = ({ SearchText }) => {
 
   useEffect(() => {
     SearchText(search);
-  }, [SearchText, search]);
+  }, [search, SearchText]);
 
   const changeHandler = (e) => {
     const { value } = e.target;

@@ -8,12 +8,14 @@ type Props = ReturnType<typeof mapStateToProps>;
 
 const AdvertList = ({ adverts }: Props) => {
   return (
-    <ul className={styled.wrapper}>
-      {adverts &&
-        adverts.map((advert) => (
-          <AdvertListItem key={advert.id} advert={advert} />
-        ))}
-    </ul>
+    <div>
+      <ul className={styled.wrapper}>
+        {adverts &&
+          adverts.map((advert) => (
+            <AdvertListItem key={advert.id} advert={advert} />
+          ))}
+      </ul>
+    </div>
   );
 };
 
