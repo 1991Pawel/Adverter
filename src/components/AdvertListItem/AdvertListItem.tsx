@@ -45,7 +45,9 @@ const AdvertListItem = ({ filter, advert, removeAdvert }: Props) => {
       </div>
       <div className={styled.list__body}>
         <span className={styled.list__title}>
-          <Highlight search={filter}>{advert.title}</Highlight>
+          <Highlight matchClass={styled.search} search={filter}>
+            {advert.title}
+          </Highlight>
         </span>
         {advert.size && (
           <span className={styled.list__desc}>{`${advert.size} m2`}</span>
