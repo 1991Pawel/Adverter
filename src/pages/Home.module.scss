@@ -1,5 +1,9 @@
 .wrapper {
-  margin: 5rem auto;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .title {

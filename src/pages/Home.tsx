@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from './Home.module.scss';
 import AbsoluteWrapper from '../components/AbsoluteWrapper/AbsoluteWrapper';
+import Tutorial from '../components/Tutorial/Tutorial';
 
 const Home = () => {
   const { t } = useTranslation();
@@ -27,6 +28,7 @@ const Home = () => {
             <p className={styled.steps__desc}>{t('StepDesc.1')}</p>
           </div>
         </div>
+        <Tutorial />
       </div>
     </AbsoluteWrapper>
   );
