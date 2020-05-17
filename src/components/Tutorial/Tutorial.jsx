@@ -14,7 +14,7 @@ const Tutorial = () => {
   return (
     <div className={styled.wrapper}>
       <button onClick={handleClick} type="button" className={styled.button}>
-        Tutorial
+        Video
       </button>
       {open && (
         <video poster={videoPoster} autoPlay loop>
