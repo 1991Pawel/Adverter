@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/media-has-caption */
 import React, { useState } from 'react';
-import video2 from '../../assets/tutorialgif.gif';
 import video from '../../assets/tutorial.mp4';
 import styled from './Tutorial.module.scss';
 import videoPoster from '../../assets/videoplaceholder.jpg';
