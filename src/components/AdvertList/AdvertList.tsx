@@ -10,10 +10,9 @@ const AdvertList = ({ adverts }: Props) => {
   return (
     <div>
       <ul className={styled.wrapper}>
-        {adverts &&
-          adverts.map((advert) => (
-            <AdvertListItem key={advert.id} advert={advert} />
-          ))}
+        {adverts?.map((advert) => (
+          <AdvertListItem key={advert.id} advert={advert} />
+        ))}
       </ul>
     </div>
   );
