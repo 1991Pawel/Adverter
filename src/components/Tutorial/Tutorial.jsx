@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import video from '../../assets/tutorial.mp4';
 import styled from './Tutorial.module.scss';
+import videoPoster from '../../assets/videoplaceholder.jpg';
 
 const Tutorial = () => {
   const [open, setOpen] = useState(false);
@@ -16,7 +17,7 @@ const Tutorial = () => {
         Tutorial
       </button>
       {open && (
-        <video poster="https://picsum.photos/200/300" autoPlay loop>
+        <video poster={videoPoster} autoPlay loop>
           >
           <source src={video} type="video/mp4" />
         </video>
