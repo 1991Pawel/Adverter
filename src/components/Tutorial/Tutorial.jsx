@@ -16,7 +16,8 @@ const Tutorial = () => {
         Tutorial
       </button>
       {open && (
-        <video autoPlay loop>
+        <video poster="https://picsum.photos/200/300" autoPlay loop>
+          >
           <source src={video} type="video/mp4" />
         </video>
       )}
